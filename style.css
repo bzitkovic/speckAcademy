@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header */
+
+.header-main {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 80px;
+}
+
+.header-inner-main {
+    max-width: 1280px;
+    margin: auto;
+    align-items: center;
+    font-size: large;
+}
+
+.header-inner-main img {
+    float: left;
+    height: 700x;
+    width: 120px;
+}
+
+.header-inner-main a {
+    text-decoration: none;
+}
+
+.header-inner-main a:hover {
+    color: tomato;
+}
+
+.header-inner-main ul {
+    float: right;
+    margin-top: 2.5%;
+    padding: 0;
+}
+
+.header-inner-main li {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+
+/* HERO Section */
+
+.hero-section {
+    background-image: url("./images/event.jpg");
+    width: 100%;
+    height: 500px;
+    background-position: left;
+    font-size: 19px;
+}
+
+.hero-section-div {
+    position: absolute;
+    padding: 20px;
+    border: transparent;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    border-style: solid;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-section-div p {
+    color: white;
+    font-size: larger;
+}
+
+.button {
+    background-color: #c59613;
+    width: 160px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    text-align: center;
+}
+
+.section-more {
+    width: 1280px;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.more-div1 {
+    width: 750px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 70px;
+}
+
+.more-div1 p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+
+/* Section MORE*/
+
+.more-div2 {
+    width: 1280px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.more-cards {
+    padding: 0;
+    width: 300px;
+    height: 320px;
+    margin-right: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.more-cards:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.more-cards img {
+    width: 280px;
+    height: 220px;
+    padding-top: 20px;
+    max-width: 240px;
+    max-height: 280px;
+}
+
+
+/* Section LAST YEAR */
+
+.last-year {
+    width: 100%;
+    text-align: center;
+    background-color: #efefef;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.last-year-inner-section {
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.last-year-inner-section h2 {
+    margin-bottom: 90px;
+}
+
+.last-year-grouping {
+    display: flex;
+}
+
+.last-year-text {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%;
+}
+
+.last-year-image {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%;
+}
+
+.last-year img {
+    width: 100%;
+    height: 350px;
+}
