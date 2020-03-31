@@ -1,19 +1,35 @@
+* {
+    margin: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 80px;
 }
 
 
 /* Header */
 
 .header-main {
-    position: fixed;
     background-color: white;
     width: 100%;
     height: 80px;
 }
 
 .header-inner-main {
+    display: flex;
+    justify-content: space-around;
     max-width: 1280px;
     margin: auto;
     align-items: center;
@@ -21,7 +37,6 @@ body {
 }
 
 .header-inner-main img {
-    float: left;
     height: 700x;
     width: 120px;
 }
@@ -40,6 +55,15 @@ body {
     padding: 0;
 }
 
+.header-inner-main ul {
+    display: none;
+}
+
+.header-inner-main ul {
+    display: flex;
+    float: right;
+}
+
 .header-inner-main li {
     list-style-type: none;
     margin: 0;
@@ -52,29 +76,31 @@ body {
 /* HERO Section */
 
 .hero-section {
-    background-image: url("./images/event.jpg");
-    width: 100%;
+    position: relative;
     height: 500px;
-    background-position: left;
-    font-size: 19px;
+    background: url('./images/event.jpg') rgba(0, 0, 0, 0.69);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
 }
 
 .hero-section-div {
-    position: absolute;
-    padding: 20px;
-    border: transparent;
     text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 200px;
-    border-style: solid;
-    border-radius: 15px;
+    position: absolute;
+    z-index: 1;
+    left: calc((100% - 400px) / 2);
+    top: calc((100% - 250px) / 2);
+    width: 400px;
+    height: 250px;
     background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .hero-section-div p {
+    margin-top: 30px;
     color: white;
     font-size: larger;
 }
@@ -86,6 +112,7 @@ body {
     border: none;
     border-radius: 7px;
     color: white;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -185,4 +212,131 @@ body {
 .last-year img {
     width: 100%;
     height: 350px;
+}
+
+
+/* Events */
+
+.page-title {
+    text-align: center;
+    padding: 25px;
+}
+
+.section-events {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+.section-events .info-box {
+    margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 765px) {
+    .section-events {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 1024px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .section-events {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .section-events {
+        gap: 60px;
+        padding: 0;
+    }
+}
+
+.info-box {
+    background: #efefef;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.info-box__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+
+.info-box__icon {
+    flex: 1 0 25px;
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+.info-box__icon_type-event {
+    background: url(./images/event-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.info-box__icon_type-speaker {
+    background: url(./images/speakers-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.info-box__title {
+    font-size: 21px;
+}
+
+.info-box__subheader {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.info-box__subheader-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-box__subheader-figure {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.info-box__subheader-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.info-box__about {
+    padding: 30px 0;
+    font-size: 17px;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    text-align: center;
+}
+
+.info-box__footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.info-box__btn-join {
+    font-weight: bold;
+    transition: color 0.3s ease-out;
+}
+
+.info-box__btn-join:hover {
+    color: #58a510;
 }
